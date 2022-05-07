@@ -3,7 +3,7 @@
 
 ## 内容
 
-##更新规范
+##更新规范  
 feat：新功能（feature）  
 fix：修补bug  
 docs：文档（documentation）  
