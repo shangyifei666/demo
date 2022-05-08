@@ -11,19 +11,31 @@ import com.example.demo.UI.FlowLayoutActivity;
 import com.example.demo.UI.Httpdemo;
 import com.example.demo.UI.IpcActivity;
 import com.example.demo.UI.Kotlin.KotlinActivity;
+import com.example.demo.UI.LeakCanaryTestActivity;
 import com.example.demo.UI.StepsActivity;
 import com.example.demo.UI.TimingActivity;
 import com.example.demo.UI.ViewHolderActivity;
 
+import butterknife.BindView;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    @BindView(R.id.btn_okhttp)
     private Button btnOkhttp;
+    @BindView(R.id.btn_flowlayout)
     private Button btnFlowLayout;
+    @BindView(R.id.btn_viewholder)
     private Button btnRecyclerHolder;
+    @BindView(R.id.btn_timing)
     private Button btnTiming;
+    @BindView(R.id.btn_steps)
     private Button btnSteps;
+    @BindView(R.id.btn_ipc)
     private Button btnIpc;
+    @BindView(R.id.btn_kotlin)
     private Button btnKotlin;
+    @BindView(R.id.btn_leakcanary_test)
+    private Button btnLeakCanaryTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,20 +46,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void init(){
-        btnOkhttp = findViewById(R.id.btn_okhttp);
         btnOkhttp.setOnClickListener(this);
-        btnFlowLayout = findViewById(R.id.btn_flowlayout);
         btnFlowLayout.setOnClickListener(this);
-        btnRecyclerHolder = findViewById(R.id.btn_viewholder);
         btnRecyclerHolder.setOnClickListener(this);
-        btnTiming = findViewById(R.id.btn_timing);
         btnTiming.setOnClickListener(this);
-        btnSteps = findViewById(R.id.btn_steps);
         btnSteps.setOnClickListener(this);
-        btnIpc = findViewById(R.id.btn_ipc);
         btnIpc.setOnClickListener(this);
-        btnKotlin = findViewById(R.id.btn_kotlin);
         btnKotlin.setOnClickListener(this);
+        btnLeakCanaryTest.setOnClickListener(this);
     }
 
     @Override
@@ -81,10 +87,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_ipc:
                 Intent ipcIntent = new Intent(MainActivity.this, IpcActivity.class);
                 startActivity(ipcIntent);
+                break;
 
             case R.id.btn_kotlin:
                 Intent ktcIntent = new Intent(MainActivity.this, KotlinActivity.class);
                 startActivity(ktcIntent);
+                break;
+
+            case R.id.btn_leakcanary_test:
+                Intent leakCanaryIntent = new Intent(MainActivity.this, LeakCanaryTestActivity.class);
+                startActivity(leakCanaryIntent);
+                break;
         }
     }
 }
