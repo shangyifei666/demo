@@ -35,7 +35,7 @@ public class StepsActivity extends AppCompatActivity {
 
         mStepTV = findViewById(R.id.tv_step);
 
-
+        //Android 29后获取步数所需权限
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q){
             if (ContextCompat.checkSelfPermission(this,Manifest.permission.ACTIVITY_RECOGNITION) != PackageManager.PERMISSION_GRANTED){
                 Toast toast = Toast.makeText(this, "未授权", Toast.LENGTH_LONG);

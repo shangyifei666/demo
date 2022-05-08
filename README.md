@@ -2,6 +2,14 @@
 ## 说明
 
 ## 内容
+1、网络请求 ：okHttp使用
+2、流式布局 ：自定义View（onMeasure、onLayout）
+3、viewholder ： viewholder使用
+4、TimingView ：自定义View（onDraw）
+5、步数 : 获取SystemService步数信息
+6、IPC机制 ： AIDL使用
+7、Kotlin ：Kotlin语法学习
+
 
 ##更新规范  
 feat：新功能（feature）  
