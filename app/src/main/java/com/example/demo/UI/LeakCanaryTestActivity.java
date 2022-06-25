@@ -6,6 +6,9 @@ import android.os.Bundle;
 
 import com.example.demo.R;
 
+/**
+ * 性能检测工具LeakCanary
+ */
 public class LeakCanaryTestActivity extends AppCompatActivity {
 
     @Override
