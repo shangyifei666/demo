@@ -24,3 +24,5 @@ chore：构建过程或辅助工具的变动
 ###2022/5/8  
 增加BufferKnife工具  
 增加LeakCanaryTest模块：用于测试LeakCanary内存检测工具  
+
+###2022/6/25
