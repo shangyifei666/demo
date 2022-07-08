@@ -70,4 +70,12 @@
         android:layout_marginTop="20dp"
         android:text="LeakCanary测试"/>
 
+    <Button
+        android:id="@+id/btn_ui_thread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="子线程更新UI"/>
+
 </LinearLayout>

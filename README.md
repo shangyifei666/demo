@@ -10,6 +10,7 @@
 6、IPC机制 ： AIDL使用
 7、Kotlin ：Kotlin语法学习
 8、LeakCanaryTest ： 性能工具测试
+9、UIThreadActivity ： 子线程更新UI
 
 ##更新规范  
 feat：新功能（feature）  
@@ -29,3 +30,6 @@ chore：构建过程或辅助工具的变动
 1、测试代码冲突
 
 2、代码冲突
+
+###2022/7/5
+新增UIThreadActivity模块：用于测试子线程更新UI

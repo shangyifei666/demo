@@ -14,33 +14,38 @@ import com.example.demo.UI.Kotlin.KotlinActivity;
 import com.example.demo.UI.LeakCanaryTestActivity;
 import com.example.demo.UI.StepsActivity;
 import com.example.demo.UI.TimingActivity;
+import com.example.demo.UI.UIThreadActivity;
 import com.example.demo.UI.ViewHolderActivity;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.btn_okhttp)
-    private Button btnOkhttp;
+    Button btnOkhttp;
     @BindView(R.id.btn_flowlayout)
-    private Button btnFlowLayout;
+    Button btnFlowLayout;
     @BindView(R.id.btn_viewholder)
-    private Button btnRecyclerHolder;
+    Button btnRecyclerHolder;
     @BindView(R.id.btn_timing)
-    private Button btnTiming;
+    Button btnTiming;
     @BindView(R.id.btn_steps)
-    private Button btnSteps;
+    Button btnSteps;
     @BindView(R.id.btn_ipc)
-    private Button btnIpc;
+    Button btnIpc;
     @BindView(R.id.btn_kotlin)
-    private Button btnKotlin;
+    Button btnKotlin;
     @BindView(R.id.btn_leakcanary_test)
-    private Button btnLeakCanaryTest;
+    Button btnLeakCanaryTest;
+    @BindView(R.id.btn_ui_thread)
+    Button btnUiThread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         init();
     }
@@ -54,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnIpc.setOnClickListener(this);
         btnKotlin.setOnClickListener(this);
         btnLeakCanaryTest.setOnClickListener(this);
+        btnUiThread.setOnClickListener(this);
     }
 
     @Override
@@ -97,6 +103,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_leakcanary_test:
                 Intent leakCanaryIntent = new Intent(MainActivity.this, LeakCanaryTestActivity.class);
                 startActivity(leakCanaryIntent);
+                break;
+
+            case R.id.btn_ui_thread:
+                Intent uiIntent = new Intent(MainActivity.this, UIThreadActivity.class);
+                startActivity(uiIntent);
                 break;
         }
     }
