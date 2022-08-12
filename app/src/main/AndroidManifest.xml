@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".UI.CLActivity"
+            android:exported="false" />
+        <activity
             android:name=".UI.UIThreadActivity"
             android:exported="false" />
         <activity

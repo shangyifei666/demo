@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnLeakCanaryTest;
     @BindView(R.id.btn_ui_thread)
     Button btnUiThread;
+    @BindView(R.id.btn_ConstraintLayout)
+    Button btnConstraintLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnKotlin.setOnClickListener(this);
         btnLeakCanaryTest.setOnClickListener(this);
         btnUiThread.setOnClickListener(this);
+        btnConstraintLayout.setOnClickListener(this);
     }
 
     @Override
@@ -108,6 +111,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_ui_thread:
                 Intent uiIntent = new Intent(MainActivity.this, UIThreadActivity.class);
                 startActivity(uiIntent);
+                break;
+
+            case R.id.btn_ConstraintLayout:
+
                 break;
         }
     }
